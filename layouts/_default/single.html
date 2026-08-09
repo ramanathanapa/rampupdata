@@ -1,8 +1,18 @@
 {{ define "main" }}
-<article class="post">
-  <h1>{{ .Title }}</h1>
-  <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-  <div class="post-body">
+<article class="doc-page">
+  <header class="doc-header">
+    <p class="doc-meta">Updated {{ .Date.Format "Jan 2, 2006" }}</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{ if .TableOfContents }}
+  <aside class="doc-toc">
+    <h2>Contents</h2>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+
+  <div class="doc-content">
     {{ .Content }}
   </div>
 </article>

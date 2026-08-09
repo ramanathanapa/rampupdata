@@ -8,15 +8,46 @@
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-    <p class="site-desc">{{ .Site.Params.description }}</p>
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer class="site-footer">
-    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Built with Hugo.</p>
-  </footer>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="site-brand">
+        <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+        <p class="site-desc">{{ .Site.Params.description }}</p>
+      </div>
+      <nav class="site-nav">
+        <a href="{{ "/" | relURL }}">Home</a>
+        <a href="{{ "/posts/" | relURL }}">Notes</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      {{ if .IsHome }}
+        {{ block "main" . }}{{ end }}
+      {{ else }}
+        <div class="docs-layout">
+          <aside class="docs-sidebar">
+            <div class="sidebar-panel">
+              <h2>Browse notes</h2>
+              <ul class="sidebar-links">
+                {{ range where .Site.RegularPages "Type" "posts" | sort "Title" }}
+                <li class="sidebar-item{{ if eq .Permalink $.Permalink }} active{{ end }}">
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+              </ul>
+            </div>
+          </aside>
+
+          <section class="docs-content">
+            {{ block "main" . }}{{ end }}
+          </section>
+        </div>
+      {{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Built with Hugo.</p>
+    </footer>
+  </div>
 </body>
 </html>
