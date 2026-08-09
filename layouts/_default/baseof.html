@@ -12,12 +12,9 @@
     <header class="site-header">
       <div class="site-brand">
         <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-        <p class="site-desc">{{ .Site.Params.description }}</p>
       </div>
       <nav class="site-nav">
         <a href="{{ "/" | relURL }}">Home</a>
-        <a href="{{ "/posts/" | relURL }}">Notes</a>
-        <a class="button button-secondary" href="{{ "/posts/intro-to-dbt/" | relURL }}">dbt guide</a>
       </nav>
     </header>
 

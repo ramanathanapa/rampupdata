@@ -1,5 +1,5 @@
 baseURL: "https://rampupdata.com/"
 languageCode: "en-us"
-title: "Ram's Data Engineering Notes"
+title: "Ram Data Blogs"
 params:
-  description: "Data engineering Blogs"
+  description: ""
