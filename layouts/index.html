@@ -1,11 +1,27 @@
 {{ define "main" }}
-<section class="hero hero-landing">
-  <div class="hero-copy-block">
-    <h1>Under construction</h1>
-    <p class="hero-copy">Ram Data Blogs is coming soon. In the meantime, you can read the dbt guide below.</p>
-    <div class="hero-actions">
-      <a class="button button-secondary" href="{{ "/posts/intro-to-dbt/" | relURL }}">Read the dbt intro</a>
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <div class="sidebar-panel">
+      <h2>Discover posts</h2>
+      <ul class="sidebar-links">
+        {{ range (sort (where .Site.RegularPages "Type" "posts") "Title") }}
+        <li class="sidebar-item{{ if eq .Permalink $.Permalink }} active{{ end }}">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
     </div>
-  </div>
-</section>
+  </aside>
+
+  <section class="docs-content home-post">
+    {{ $post := first 1 (sort (where .Site.RegularPages "Type" "posts") "Title") }}
+    {{ range $post }}
+      <article class="doc-page">
+        <div class="doc-content">
+          {{ .Content }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+</div>
 {{ end }}
