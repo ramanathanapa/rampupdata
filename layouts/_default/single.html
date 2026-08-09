@@ -1,7 +1,10 @@
 {{ define "main" }}
 <article class="doc-page">
   <header class="doc-header">
-    <p class="doc-meta">Updated {{ .Date.Format "Jan 2, 2006" }}</p>
+    <div class="doc-header-top">
+      <a class="doc-back" href="{{ "/posts/" | relURL }}">← All guides</a>
+      <p class="doc-meta">Updated {{ .Date.Format "Jan 2, 2006" }}</p>
+    </div>
     <h1>{{ .Title }}</h1>
   </header>
 

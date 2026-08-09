@@ -1,19 +1,19 @@
 {{ define "main" }}
 <section class="hero">
   <p class="eyebrow">Documentation</p>
-  <h1>Ram's Data Engineering Notes</h1>
-  <p class="hero-copy">A clean, accessible collection of articles for building reliable data systems, analytics pipelines, and production workflows.</p>
+  <h1>Ram's data engineering guides</h1>
+  <p class="hero-copy">Explore practical notes, architecture guides, and production-ready patterns for building modern data workflows and analytics systems.</p>
 </section>
 
-<section class="post-list">
-  {{ range (where .Site.RegularPages "Type" "posts") }}
-  <article class="post-card">
-    <div class="card-content">
+<section class="card-group">
+  {{ range (sort (where .Site.RegularPages "Type" "posts") "Title") }}
+  <article class="guide-card">
+    <div>
+      <p class="badge">Guide</p>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      <p class="card-meta">{{ .Date.Format "Jan 2, 2006" }}</p>
       <p>{{ .Summary }}</p>
     </div>
-    <a class="card-link" href="{{ .RelPermalink }}">Read article</a>
+    <a class="card-action" href="{{ .RelPermalink }}">Read guide →</a>
   </article>
   {{ end }}
 </section>
