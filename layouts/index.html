@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="post-list">
+  {{ range (where .Site.RegularPages "Type" "posts") }}
+  <article class="post-summary">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+    <p>{{ .Summary }}</p>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

@@ -1,0 +1,6 @@
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "Ram's Data Engineering Notes"
+theme: ""
+params:
+  description: "Field notes on data engineering, from 22 years in the trenches."
