@@ -1,8 +1,64 @@
 {{ define "main" }}
-<section class="hero">
-  <p class="eyebrow">Documentation</p>
-  <h1>Ram's data engineering guides</h1>
-  <p class="hero-copy">Explore practical notes, architecture guides, and production-ready patterns for building modern data workflows and analytics systems.</p>
+<section class="hero hero-landing">
+  <div class="hero-copy-block">
+    <p class="eyebrow">Documentation</p>
+    <h1>Make data engineering easier with modern analytics guides</h1>
+    <p class="hero-copy">Explore practical, production-ready patterns for data modeling, orchestration, and analytics workflows in a clean, easy-to-scan documentation format.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ "/posts/" | relURL }}">Browse guides</a>
+      <a class="button button-secondary" href="{{ "/posts/intro-to-dbt/" | relURL }}">Read the dbt intro</a>
+    </div>
+    <div class="hero-notice">
+      Trusted by ambitious data teams building scalable analytics systems.
+    </div>
+  </div>
+
+  <div class="hero-panel">
+    <div class="hero-panel-copy">
+      <span class="eyebrow">Build with confidence</span>
+      <h2>Documentation designed for engineering teams</h2>
+      <p>Quickly find the right guide for analytics modeling, orchestration, and production data workflows.</p>
+    </div>
+    <div class="hero-stat-grid">
+      <div>
+        <strong>5+</strong>
+        <span>Core guide themes</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>Markdown-based content</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trusted-logos">
+  <span>dbt</span>
+  <span>Airbyte</span>
+  <span>Snowflake</span>
+  <span>Fivetran</span>
+  <span>Looker</span>
+</section>
+
+<section class="feature-section">
+  <div class="section-heading">
+    <p class="eyebrow">Powerful, collaborative, and practical</p>
+    <h2>Build smarter data workflows with clear guidance</h2>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Design reliable models</h3>
+      <p>Create reusable SQL models with tests and documentation to keep analytics logic maintainable.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Track data lineage</h3>
+      <p>Understand how tables depend on one another and keep changes traceable across your warehouse.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Ship production-ready docs</h3>
+      <p>Publish structured guidance and code-first workflows for your team to follow.</p>
+    </article>
+  </div>
 </section>
 
 <section class="card-group">
@@ -16,5 +72,13 @@
     <a class="card-action" href="{{ .RelPermalink }}">Read guide →</a>
   </article>
   {{ end }}
+</section>
+
+<section class="cta-banner">
+  <div>
+    <h2>Ready to build better data docs and workflows?</h2>
+    <p>Use these guides as a starting point for production analytics engineering and dbt-powered transformation pipelines.</p>
+  </div>
+  <a class="button button-primary" href="{{ "/posts/" | relURL }}">Start reading guides</a>
 </section>
 {{ end }}
