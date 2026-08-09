@@ -5,7 +5,7 @@ type: "posts"
 tags:
   - dbt
   - data engineering
-summary: "A beginner-friendly introduction to dbt.
+summary: "A beginner-friendly introduction to dbt."
 ---
 # Introduction to dbt (Data Build Tool)
 
