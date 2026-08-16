@@ -3,23 +3,13 @@ title: "Data, Explained by Appa"
 date: 2026-08-16
 type: "posts"
 tags:
-	- data engineering
-	- glossary
+  - data engineering
+  - glossary
 summary: "A playful primer explaining core data concepts through a conversation between Appa and Anya."
 draft: false
 ---
 
 # Data, Explained by Appa
----
-title: "Data, Explained by Appa"
-date: 2026-08-16
-type: "posts"
-tags:
-	- data engineering
-	- glossary
-summary: "A playful primer explaining core data concepts through a conversation between Appa and Anya."
----
-
 **Anya:** Appa, what is data?
 
 **Appa:** Data is like rain, kutty. Every time something happens — you tap the phone, you buy something, a sensor reads the temperature — a drop of information falls. That drop is "data."
