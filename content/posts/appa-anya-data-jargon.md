@@ -1,5 +1,15 @@
-# Data, Explained by Appa
+---
+title: "Data, Explained by Appa"
+date: 2026-08-16
+type: "posts"
+tags:
+	- data engineering
+	- glossary
+summary: "A playful primer explaining core data concepts through a conversation between Appa and Anya."
+draft: false
+---
 
+# Data, Explained by Appa
 ---
 title: "Data, Explained by Appa"
 date: 2026-08-16
