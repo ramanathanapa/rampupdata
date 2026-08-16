@@ -21,11 +21,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+      - name: Init submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.140.0"
+          hugo-version: "0.164.0"
           extended: true
+      - name: Check Hugo
+        run: hugo version
       - name: Build
         run: hugo --minify
       - name: Upload artifact
