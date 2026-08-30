@@ -2,7 +2,6 @@
 <div class="docs-layout">
   <aside class="docs-sidebar">
     <div class="sidebar-panel">
-      <h2>Discover posts</h2>
       <ul class="sidebar-links">
         {{ range (sort (where .Site.RegularPages "Type" "posts") "Title") }}
         <li class="sidebar-item{{ if eq .Permalink $.Permalink }} active{{ end }}">
