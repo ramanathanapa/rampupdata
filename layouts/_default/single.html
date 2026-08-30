@@ -8,13 +8,6 @@
     <h1>{{ .Title }}</h1>
   </header>
 
-  {{ if .TableOfContents }}
-  <aside class="doc-toc">
-    <h2>Contents</h2>
-    {{ .TableOfContents }}
-  </aside>
-  {{ end }}
-
   <div class="doc-content">
     {{ .Content }}
   </div>
