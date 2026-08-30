@@ -10,8 +10,6 @@ tags:
 summary: "A personal note on fixing a small but repeated hiring feedback problem with a lightweight internal tool."
 ---
 
-# Feedback, Structured - A Vibe-Coded Fix for a Mess
-
 Every hiring loop I've been part of has the same quiet friction point: feedback lives
 everywhere except one place. One interviewer's notes are in an email. The coding challenge
 result is a PDF sitting in a different tool. The recruiter's third-party assessment is a
