@@ -1,5 +1,6 @@
 ---
 title: "Feedback, Structured - A Vibe-Coded Fix for a Mess"
+slug: "feedback-structured-a-vibe-coded-fix-for-a-mess"
 date: 2026-08-30
 type: "posts"
 tags:
