@@ -49,6 +49,100 @@ a:hover {
   padding: 0 24px 40px;
 }
 
+.home-landing {
+  padding: 42px 0 20px;
+}
+
+.home-hero {
+  padding: 32px 0 20px;
+}
+
+.home-hero h1 {
+  margin: 12px 0 16px;
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.home-intro {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.home-sections {
+  display: grid;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.home-panel {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.04);
+}
+
+.home-panel h2 {
+  margin: 0 0 20px;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+}
+
+.compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.post-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.post-card {
+  padding: 18px 18px 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface-strong);
+}
+
+.post-card-date {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.post-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.post-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.inline-heading {
+  margin-bottom: 20px;
+}
+
 .site-header {
   display: flex;
   flex-wrap: wrap;

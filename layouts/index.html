@@ -1,26 +1,54 @@
 {{ define "main" }}
-<div class="docs-layout">
-  <aside class="docs-sidebar">
-    <div class="sidebar-panel">
-      <ul class="sidebar-links">
-        {{ range (sort (where .Site.RegularPages "Type" "posts") "Title") }}
-        <li class="sidebar-item{{ if eq .Permalink $.Permalink }} active{{ end }}">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
+<section class="home-landing">
+  <div class="home-hero">
+    <p class="page-tag">Data stories & practical learning</p>
+    <h1>Build better intuition around data, engineering, and decision-making.</h1>
+    <p class="home-intro">
+      I write about the ideas, systems, and trade-offs behind modern data work — from the basics
+      people keep forgetting to the workflows that make teams ship with more confidence.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ "/posts/" | relURL }}">Browse posts</a>
+      <a class="button button-secondary" href="{{ "/posts/intro-to-dbt/" | relURL }}">Start with a post</a>
     </div>
-  </aside>
+  </div>
 
-  <section class="docs-content home-post">
-    {{ $post := first 1 (sort (where .Site.RegularPages "Type" "posts") "Title") }}
-    {{ range $post }}
-      <article class="doc-page">
-        <div class="doc-content">
-          {{ .Content }}
-        </div>
-      </article>
-    {{ end }}
-  </section>
-</div>
+  <div class="home-sections">
+    <section class="home-panel">
+      <h2>What you’ll find here</h2>
+      <div class="feature-grid compact-grid">
+        <article class="feature-card">
+          <h3>Data fundamentals</h3>
+          <p>Clear explanations of concepts, patterns, and the mental models behind working with data.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Engineering workflows</h3>
+          <p>Practical notes on pipelines, tooling, modeling, and what makes teams move faster without chaos.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Decision-making</h3>
+          <p>Thoughts on software, systems, and the small operational choices that create better outcomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-panel">
+      <div class="section-heading inline-heading">
+        <p class="eyebrow">Latest writing</p>
+        <h2>Pick a post and keep reading</h2>
+      </div>
+
+      {{ $posts := first 3 (sort (where .Site.RegularPages "Type" "posts") "Date" "desc") }}
+      <div class="post-cards">
+        {{ range $posts }}
+        <article class="post-card">
+          <p class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary }}</p>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+</section>
 {{ end }}
