@@ -560,6 +560,37 @@ a:hover {
   font-size: 1.05rem;
 }
 
+.read-next {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.read-next h2 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.read-next ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.read-next li a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-weight: 600;
+}
+
 .doc-content table {
   width: 100%;
   border-collapse: collapse;

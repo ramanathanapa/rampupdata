@@ -8,7 +8,8 @@
     {{ .Content }}
   </div>
 
-  {{ $related := where (where .Site.RegularPages "Type" "posts") "Permalink" "ne" .Permalink | first 3 }}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $related := where $posts "RelPermalink" "ne" .RelPermalink | first 3 }}
   {{ if gt (len $related) 0 }}
   <div class="read-next">
     <h2>Read next</h2>
