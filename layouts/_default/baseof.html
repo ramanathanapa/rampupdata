@@ -19,26 +19,10 @@
     </header>
 
     <main class="page-main">
-      {{ if .IsHome }}
+      {{ if or .IsHome (and (eq .Type "posts") (eq .Kind "section")) }}
         {{ block "main" . }}{{ end }}
       {{ else }}
-        <div class="docs-layout">
-          <aside class="docs-sidebar">
-            <div class="sidebar-panel">
-              <ul class="sidebar-links">
-                {{ range (sort (where .Site.RegularPages "Type" "posts") "Title") }}
-                <li class="sidebar-item{{ if eq .Permalink $.Permalink }} active{{ end }}">
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </li>
-                {{ end }}
-              </ul>
-            </div>
-          </aside>
-
-          <section class="docs-content">
-            {{ block "main" . }}{{ end }}
-          </section>
-        </div>
+        {{ block "main" . }}{{ end }}
       {{ end }}
     </main>
 
