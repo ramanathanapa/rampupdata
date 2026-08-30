@@ -76,7 +76,8 @@ a:hover {
 
 .profile-logo {
   display: block;
-  width: min(100%, 880px);
+  width: min(100%, 1300px);
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -109,7 +110,7 @@ a:hover {
   }
 
   .profile-logo {
-    width: min(100%, 420px);
+    width: min(100%, 820px);
   }
 }
 
