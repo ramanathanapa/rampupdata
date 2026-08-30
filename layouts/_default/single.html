@@ -7,5 +7,17 @@
   <div class="doc-content">
     {{ .Content }}
   </div>
+
+  {{ $related := where (where .Site.RegularPages "Type" "posts") "Permalink" "ne" .Permalink | first 3 }}
+  {{ if gt (len $related) 0 }}
+  <div class="read-next">
+    <h2>Read next</h2>
+    <ul>
+      {{ range $related }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
 </article>
 {{ end }}
