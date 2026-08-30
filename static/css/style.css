@@ -64,10 +64,29 @@ a:hover {
   letter-spacing: -0.04em;
 }
 
+.profile-intro-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
 .home-intro {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
   padding: 28px 30px;
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -78,7 +97,19 @@ a:hover {
   line-height: 1.6;
   font-weight: 500;
   letter-spacing: -0.02em;
-  text-align: center;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .profile-intro-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-logo {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .home-sections {
