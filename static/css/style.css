@@ -67,6 +67,8 @@ a:hover {
 .home-intro {
   max-width: 760px;
   margin: 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--accent);
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.8;
