@@ -1,0 +1,63 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Interview Feedback Tracker</title>
+  <desc id="desc">A mockup of the app home screen with action buttons.</desc>
+  <rect width="1200" height="820" fill="#efefee"/>
+
+  <rect x="0" y="0" width="1200" height="52" fill="#efefee"/>
+  <rect x="0" y="0" width="1200" height="1" fill="#d6d2cf"/>
+
+  <g transform="translate(24,15)">
+    <path d="M15 18 L22 18 L22 26 L15 26 Z" fill="#3d3d3d"/>
+    <path d="M18 8 L24 8 L24 18 L18 18 Z" fill="#3d3d3d"/>
+    <path d="M10 12 L18 12 L18 20 L10 20 Z" fill="#3d3d3d"/>
+    <path d="M9 18 L15 18 L15 28 L9 28 Z" fill="#3d3d3d"/>
+    <path d="M12 28 L18 28 L18 34 L12 34 Z" fill="#3d3d3d"/>
+    <path d="M18 22 L26 22 L26 30 L18 30 Z" fill="#3d3d3d"/>
+    <circle cx="16" cy="15" r="12" fill="#f0f0f0" stroke="#3d3d3d" stroke-width="2"/>
+    <path d="M12 16 L15 19 L19 13" fill="none" stroke="#3d3d3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="70" y="35" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#2d2d2d">Interview Feedback Tracker</text>
+
+  <g transform="translate(1080,12)">
+    <rect x="0" y="0" width="16" height="16" fill="none" stroke="#7a7a7a" stroke-width="1.5"/>
+    <path d="M4 4 L12 12 M12 4 L4 12" stroke="#7a7a7a" stroke-width="1.5"/>
+    <rect x="28" y="0" width="16" height="16" fill="none" stroke="#7a7a7a" stroke-width="1.5"/>
+    <path d="M34 4 H40 M34 8 H40 M34 12 H40" stroke="#7a7a7a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(0,0)">
+    <text x="600" y="185" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" fill="#2b2b2b">Interview Feedback</text>
+    <text x="600" y="236" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" fill="#5a5a5a" font-style="italic">Track multi-level candidate feedback and hit it off cleanly.</text>
+
+    <g transform="translate(370,285)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#d88d72"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Manage Candidates</text>
+    </g>
+
+    <g transform="translate(370,365)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#d88d72"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Capture Feedback</text>
+    </g>
+
+    <g transform="translate(370,445)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#d88d72"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Export Feedback to PDF</text>
+    </g>
+
+    <g transform="translate(370,525)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#d88d72"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Compile Full Packet</text>
+    </g>
+
+    <g transform="translate(370,600)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#f5f1ee" stroke="#d7d2cf"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2b2b2b">Archived</text>
+    </g>
+
+    <g transform="translate(370,675)">
+      <rect x="0" y="0" width="460" height="58" rx="4" fill="#f5f1ee" stroke="#d7d2cf"/>
+      <text x="230" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2b2b2b">Exit</text>
+    </g>
+  </g>
+</svg>
