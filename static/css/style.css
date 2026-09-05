@@ -54,7 +54,7 @@ a:hover {
 }
 
 .home-hero {
-  padding: 0 0 0;
+  padding: 32px 0 20px;
 }
 
 .home-hero h1 {
@@ -65,66 +65,28 @@ a:hover {
 }
 
 .profile-intro-wrap {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .profile-logo {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0;
-  width: 100%;
-  margin: 0 auto 28px;
-  line-height: 0.9;
-  letter-spacing: -0.065em;
-  white-space: nowrap;
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-}
-
-.brand-logo-text {
-  display: inline-block;
-  font-size: clamp(2.8rem, 7vw, 10rem);
-  font-weight: 900;
-  vertical-align: bottom;
-}
-
-.brand-logo-text--dark {
-  color: #0e1b33;
-}
-
-.brand-logo-text--mid {
-  color: #0e1b33;
-}
-
-.brand-logo-text--blue {
-  color: #1a90e8;
-}
-
-.brand-logo-chart {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 90px;
-  margin-left: 14px;
-  margin-bottom: 10px;
+  display: block;
+  width: min(100%, 960px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   flex-shrink: 0;
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
-
-.chart-bar {
-  position: absolute;
-  bottom: 8px;
-  width: 18px;
-  border-radius: 2px 2px 0 0;
-  background: rgba(26, 144, 232, 0.82);
-}
-
-.bar-one { left: 18px; height: 18px; }
-.bar-two { left: 52px; height: 34px; }
-.bar-three { left: 86px; height: 26px; }
-.bar-four { left: 120px; height: 52px; background: rgba(26, 144, 232, 0.56); }
 
 .home-intro {
   width: 100%;
@@ -143,19 +105,12 @@ a:hover {
 }
 
 @media (max-width: 720px) {
+  .profile-intro-wrap {
+    gap: 12px;
+  }
+
   .profile-logo {
-    gap: 0;
-    flex-wrap: wrap;
-  }
-
-  .brand-logo-chart {
-    width: 120px;
-    height: 72px;
-    margin: 10px 0 0;
-  }
-
-  .brand-logo-text {
-    font-size: clamp(3rem, 16vw, 7rem);
+    width: min(100%, 620px);
   }
 }
 
