@@ -10,8 +10,6 @@ summary: "A beginner-friendly introduction to data contracts - what they are, wh
 draft: false
 ---
 
-# Data Contracts: The Basics
-
 ## What is a data contract?
 
 A **data contract** is a formal, machine-readable agreement between the team that *produces* data and the teams that *consume* it. It specifies:
