@@ -26,7 +26,7 @@
         <h2>Pick a post and keep reading</h2>
       </div>
 
-      {{ $posts := first 3 (sort (where .Site.RegularPages "Type" "posts") "Date" "desc") }}
+      {{ $posts := first 10 (sort (where .Site.RegularPages "Type" "posts") "Date" "desc") }}
       <div class="post-cards">
         {{ range $posts }}
         <article class="post-card">
