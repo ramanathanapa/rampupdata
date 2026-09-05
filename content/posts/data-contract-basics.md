@@ -35,15 +35,6 @@ Data contracts show up anywhere data crosses a team boundary:
 - **Cross-team data mesh** - in a data mesh setup, each domain team owns and publishes its own data products. Contracts are the mechanism that lets other domains consume that data with confidence, without having to ask "did anything change?" in a Slack thread.
 - **Third-party data feeds** - vendor or partner data feeding into your warehouse, where you have zero control over the source but still need to detect breaking changes fast.
 
-```mermaid
-flowchart LR
-    A[Producer: app/service/team] -->|publishes against| C[Data Contract]
-    C -->|enforced at| B[Pipeline / Warehouse]
-    B --> D[Consumers: analytics, ML, BI, other teams]
-    C -.validates.-> A
-    C -.validates.-> B
-```
-
 ---
 
 ## Why modern data engineering needs to adopt this
@@ -76,14 +67,6 @@ Snowflake doesn't (yet) ship a single, dedicated "data contract" object the way 
 | **Sharing boundary** | **Secure Views** and **Snowflake Data Sharing / Marketplace listings** | The contract *is* effectively the shared object's schema - consumers never see the underlying raw table |
 
 A common pattern: don't expose raw ingested tables directly. Put a **contract view** in front of them that only ever exposes the agreed-upon columns and types. The raw table underneath can evolve freely; the view is the actual contract surface, and it only changes on a deliberate, versioned basis (e.g., `orders_v1`, `orders_v2`).
-
-```mermaid
-flowchart TD
-    A[Raw ingested table] --> B[Contract view: orders_v1]
-    B --> C[Consumers: BI, ML, other teams]
-    A -.schema can evolve freely.-> A
-    B -.changes only on deliberate version bump.-> B
-```
 
 ### Tech options beyond Snowflake-native features
 
