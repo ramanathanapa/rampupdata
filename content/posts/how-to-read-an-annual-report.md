@@ -1,5 +1,3 @@
-# How to Read an Annual Report
-
 ---
 title: "How to Read an Annual Report"
 date: 2026-10-04
