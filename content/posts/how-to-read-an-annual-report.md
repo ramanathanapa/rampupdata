@@ -184,3 +184,7 @@ Part 2 is coming soon: notes to the accounts, executive pay, governance, risk an
 ---
 
 *Figures from the DWS Annual Report 2025. The €3.00 dividend was a proposal to the June 2026 AGM. Examples are illustrative. For education only, not investment advice.*
+
+## Reference
+
+- [DWS Annual Report 2025](https://download.dws.com/download/asset/cce48ce4-881c-4e27-9fc5-d715551e1f59)
